@@ -1,0 +1,5 @@
+(setq org-publish-cache (make-hash-table :test 'equal :weakness nil :size 100))
+(puthash ":project:" "rss" org-publish-cache)
+(puthash ":cache-file:" "/home/travis/build/jcouyang/orgpress/public/.org-timestamps/rss.cache" org-publish-cache)
+(puthash "/home/travis/build/jcouyang/orgpress/org/index.org" '(:numbering ((("[[file:helloworld.org][Hello" "OrgPress!]]") 1) (("[[file:markdown/hello-from-md.md.org][Hello" "Markdown]]") 2)) :index nil) org-publish-cache)
+(puthash "Xd4a35d7f8b0badd977231d218c15caeb8928fc71" 1427274259 org-publish-cache)
