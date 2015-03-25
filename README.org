@@ -1,0 +1,70 @@
+#+TITLE: Simple Org Blog Generator
+#+DATE: <2015-02-05 Thu>
+
+[[https://travis-ci.org/jcouyang/blog][https://api.travis-ci.org/jcouyang/blog.svg]]
+
+* TL;DR Why another Org Mode Blog Generator
+
+** 1. This is a *really* *really simple* blog generator
+so you can focus on writting
+
+only thing you need to do is adding =org= or =markdown= files into =org= folder and =git push=, no more =C-c C-e P f=
+** 2. You Don't need to learn EMACS...and Travis-ci will do all the job
+just focus on writting, travis ci will take care of everything 
+- =(org-publish-all)=
+- =git push= to github pages
+** 3. You Don't need to know =Ruby= to build a Blog
+
+** 4. Github Favored Markdown support
+
+** 5. Disqus comment system
+everthing you want to custom can be added to =html/postamble.html=
+** 6. RSS
+
+** 7. Site Search
+using [[http://swiftype.com/]]
+
+* Live Demo
+[[https://blog.oyanglul.us]]
+
+* OK here is the Magic
+https://github.com/jcouyang/blog/blob/master/emacs.el
+
+* Configuration
+there're few places you need to customize for you own blog
+
+** Deploy Key
+https://github.com/jcouyang/blog/blob/master/deploy.enc
+
+this is my encrypted deploy key so you better generate your own.
+
+here's how
+
+*** =ssh-keygen=: 
+ with name deploy or somthing you like, I named it deploy
+*** =gem install travis=
+*** =travis login=
+*** =travis encrypt-file deploy --add=
+this will generate encrypted version of =deploy= file.
+
+Make sure not to add =deploy= to the git repository. only add =deploy.enc=
+
+the option =--add= will add something like [[https://github.com/jcouyang/blog/blob/master/.travis.yml#L6][this]] to your =.travis.yml= file, which is the decrypt step running on travis ci, so make sure it's at least before =before_script= step
+*** =cat deploy.pub | pbcopy=
+*** open the github repo you wanna publish as github pages > Settings > Deploy keys
+*** =PASTE=
+** Default Author Name
+https://github.com/jcouyang/blog/blob/master/ci-publish.sh#L2
+
+this will be the default author name if you did set =#+AUTHOR= in your org file.
+** repository
+set it to your repo
+https://github.com/jcouyang/blog/blob/master/ci-publish.sh#L3
+
+also push user information https://github.com/jcouyang/blog/blob/master/ci-push.sh#L2
+** Disqus
+https://github.com/jcouyang/blog/blob/master/html/postamble.html#L21
+** Google Analystics
+https://github.com/jcouyang/blog/blob/master/html/postamble.html#L13
+** Swiftype
+https://github.com/jcouyang/blog/blob/master/html/postamble.html#L38

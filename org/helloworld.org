@@ -1,0 +1,6 @@
+#+title: Hello OrgPress!
+#+description: a emacs static blog generator
+#+keywords: orgmode,org,blog,static, generator
+#+date: <2015-03-25 Wed>
+
+Hello World
