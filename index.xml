@@ -10,26 +10,25 @@
      xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
      xmlns:media="http://search.yahoo.com/mrss/"><channel>
   <title>(Jichao Ouyang' Blog)</title>
-  <atom:link href="https://blog.oyanglul.us/index.xml" rel="self" type="application/rss+xml" />
-  <link>https://blog.oyanglul.us</link>
+  <atom:link href="http://blog.oyanglul.us/index.xml" rel="self" type="application/rss+xml" />
+  <link>http://blog.oyanglul.us</link>
   <description><![CDATA[]]></description>
   <language>en</language>
-  <pubDate>Wed, 25 Mar 2015 09:37:47 +0000</pubDate>
-  <lastBuildDate>Wed, 25 Mar 2015 09:37:47 +0000</lastBuildDate>
+  <pubDate>Sun, 17 May 2015 15:36:21 +0000</pubDate>
+  <lastBuildDate>Sun, 17 May 2015 15:36:21 +0000</lastBuildDate>
   <generator>Emacs 24.3 Org-mode 8.2.10</generator>
   <webMaster>oyanglulu@gmail.com (Jichao)</webMaster>
   <image>
     <url>http://orgmode.org/img/org-mode-unicorn-logo.png</url>
     <title>(Jichao Ouyang' Blog)</title>
-    <link>https://blog.oyanglul.us</link>
+    <link>http://blog.oyanglul.us</link>
   </image>
-
 
 
   <item>
     <title>Hello OrgPress!</title>
-    <link>https://blog.oyanglul.us/index.html#sec-1</link>
-    <guid isPermaLink="false">https://blog.oyanglul.us/index.html#sec-1</guid>
+    <link>http://blog.oyanglul.us/helloworld.html</link>
+    <guid isPermaLink="false">http://blog.oyanglul.us/helloworld.html</guid>
     <pubDate>Wed, 25 Mar 2015 00:00:00 +0000</pubDate>
 
     <description><![CDATA[<p>
@@ -45,8 +44,8 @@
 
   <item>
     <title>Hello Markdown</title>
-    <link>https://blog.oyanglul.us/index.html#sec-2</link>
-    <guid isPermaLink="false">https://blog.oyanglul.us/index.html#sec-2</guid>
+    <link>http://blog.oyanglul.us/markdown/hello-from-md.md.html</link>
+    <guid isPermaLink="false">http://blog.oyanglul.us/markdown/hello-from-md.md.html</guid>
     <pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>
 
     <description><![CDATA[<p>
