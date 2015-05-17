@@ -26,7 +26,7 @@
         :base-directory ,blog-path
         :base-extension "org"
         :html-doctype "html5"
-        :html-head "<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"stylesheet\" href=\"/style/pixyll.css\" />"
+        :html-head "<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"stylesheet\" href=\"/style/pixyll.css\"/><link rel=\"alternate\" type=\"application/rss+xml\" title=\"Jichao Ouyang\" href=\"http://blog.oyanglul.us/index.xml\"/>"
         :html-html5-fancy t
         :html-postamble ,postamble
         ;; HTML directory
@@ -34,12 +34,14 @@
         :publishing-function org-html-publish-to-html
         :recursive t
         :headline-levels 4
+        :with-sub-superscript nil
         :section-numbers nil
         :html-link-up "/index.html"
         :html-link-home ,config-home-link
         :auto-preamble t
         :auto-sitemap t
         :sitemap-filename "index.org"
+        :exclude "\!.*\.org"
         :sitemap-function org-blog-export
         :blog-entry-format ,config-entry-format
         :blog-export-dates t
@@ -60,7 +62,7 @@
        ("rss"
          :base-directory ,blog-path
          :base-extension "org"
-         :html-link-home ,config-home-link
+         :html-link-home ,config-base-url
          :html-link-use-abs-url t
          :rss-extension "xml"
          :publishing-directory "public"
