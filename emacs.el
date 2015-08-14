@@ -11,9 +11,6 @@
 (setq blog-path (expand-file-name "source"))
 (setq org-html-validation-link nil)
 (setq org-confirm-babel-evaluate nil)
-(custom-set-variables
-  '(org-publish-timestamp-directory
-     (convert-standard-filename "public/.org-timestamps/")))
 (setq postamble (with-temp-buffer
                   (insert-file-contents "html/postamble.html")
                   (buffer-string)))

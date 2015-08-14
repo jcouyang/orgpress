@@ -6,6 +6,7 @@ dependencies:
     - pandoc-1.13.2-1-amd64.deb
     - .cask
     - emacs-24.5
+    - ~/.org-timestamps
   pre:
     - if [[ ! -e emacs-24.5 ]]; then wget http://gnu.opencube.ca/emacs/emacs-24.5.tar.xz && tar xf emacs-24.5.tar.xz && cd emacs-24.5 && ./configure && make && cd ..; fi
     - cd emacs-24.5 && sudo make install && cd ..

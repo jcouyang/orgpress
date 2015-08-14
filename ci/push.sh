@@ -1,4 +1,6 @@
 cd public
+EMAIL=${EMAIL:=oyanglulu@gmail.com}
+USERNAME=${USERNAME:=$CIRCLE_PROJECT_USERNAME}
 git config --global user.email "$EMAIL"
 git config --global user.name "$USERNAME"
 git add .
