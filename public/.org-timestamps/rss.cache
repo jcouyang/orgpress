@@ -1,5 +1,0 @@
-(setq org-publish-cache (make-hash-table :test 'equal :weakness nil :size 100))
-(puthash ":project:" "rss" org-publish-cache)
-(puthash ":cache-file:" "/Users/jcouyang/Develop/orgpress/public/.org-timestamps/rss.cache" org-publish-cache)
-(puthash "/Users/jcouyang/Develop/orgpress/source/index.org" '(:references (((headline "[[file:understand-prototype.org][理解JavaScript的原型链和继承]]") . "orgheadline1")) :index nil :numbering ((("[[file:understand-prototype.org][理解JavaScript的原型链和继承]]") 1))) org-publish-cache)
-(puthash "Xa7770b6c85459a832707b41b7252782b31312efb" 1439537647 org-publish-cache)
