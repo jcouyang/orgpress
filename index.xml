@@ -9,47 +9,47 @@
      xmlns:georss="http://www.georss.org/georss"
      xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
      xmlns:media="http://search.yahoo.com/mrss/"><channel>
-  <title>(Jichao Ouyang' Blog)</title>
+  <title>(Jichao Ouyang's Blog)</title>
   <atom:link href="http://blog.oyanglul.us/index.xml" rel="self" type="application/rss+xml" />
   <link>http://blog.oyanglul.us</link>
   <description><![CDATA[]]></description>
   <language>en</language>
-  <pubDate>Sun, 17 May 2015 15:36:21 +0000</pubDate>
-  <lastBuildDate>Sun, 17 May 2015 15:36:21 +0000</lastBuildDate>
-  <generator>Emacs 24.3 Org-mode 8.2.10</generator>
-  <webMaster>oyanglulu@gmail.com (Jichao)</webMaster>
+  <pubDate>Fri, 14 Aug 2015 14:16:31 +0000</pubDate>
+  <lastBuildDate>Fri, 14 Aug 2015 14:16:31 +0000</lastBuildDate>
+  <generator>Emacs 24.5 Org-mode 8.3.1</generator>
+  <webMaster>ubuntu@box934 (nil)</webMaster>
   <image>
     <url>http://orgmode.org/img/org-mode-unicorn-logo.png</url>
-    <title>(Jichao Ouyang' Blog)</title>
+    <title>(Jichao Ouyang's Blog)</title>
     <link>http://blog.oyanglul.us</link>
   </image>
 
 
   <item>
-    <title>Hello OrgPress!</title>
-    <link>http://blog.oyanglul.us/helloworld.html</link>
-    <guid isPermaLink="false">http://blog.oyanglul.us/helloworld.html</guid>
-    <pubDate>Wed, 25 Mar 2015 00:00:00 +0000</pubDate>
+    <title>Welcome to OrgPress</title>
+    <link>http://blog.oyanglul.us/orgpress-source/hello-world.html</link>
+    <author>nil</author>
+    <guid isPermaLink="false">http://blog.oyanglul.us/orgpress-source/hello-world.html</guid>
+    <pubDate>Fri, 14 Aug 2015 00:00:00 +0000</pubDate>
 
     <description><![CDATA[<p>
-    <i>Mar 25, 2015</i>
+    <i>Aug 14, 2015</i>
   </p>
 
-  <p>
-    a emacs static blog generator
-  </p>
+
   <hr  />
     ]]></description>
   </item>
 
   <item>
-    <title>Hello Markdown</title>
-    <link>http://blog.oyanglul.us/markdown/hello-from-md.md.html</link>
-    <guid isPermaLink="false">http://blog.oyanglul.us/markdown/hello-from-md.md.html</guid>
-    <pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>
+    <title>理解JavaScript的原型链和继承</title>
+    <link>http://blog.oyanglul.us/understand-prototype.html</link>
+    <author>nil</author>
+    <guid isPermaLink="false">http://blog.oyanglul.us/understand-prototype.html</guid>
+    <pubDate>Fri, 03 Jul 2015 00:00:00 +0000</pubDate>
 
     <description><![CDATA[<p>
-    <i>Feb 05, 2015</i>
+    <i>Jul 03, 2015</i>
   </p>
 
 
