@@ -1,7 +1,7 @@
 <p>Author: %a</p>
 <p>Modified: %C</p>
 <p><a href="https://travis-ci.org/jcouyang/blog"><img src="https://travis-ci.org/jcouyang/blog.svg?branch=master"></a> with %c</p>
-&lt;&gt; with _(:з」∠)_ by <a href="https://github.com/jcouyang/orgpress">OrgPress</a>
+<p>&lt;&gt; with _(:з」∠)_ by <a href="https://github.com/jcouyang/orgpress">OrgPress</a></p>
 <p><a href="/index.xml">RSS</a> | <a href="/archive.html">ARCHIVE</a> | <a href="/theindex.html">INDEX</a> | <a href="#" id="edit-in-github">EDIT</a></p>
 
 <script>
@@ -27,8 +27,10 @@
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'orgblog';
-    var disqus_identifier = window.location.pathname;
+ var disqus_shortname = 'orgblog';
+ var href = window.location.href;
+ href.replace(/^https/, 'http');
+ var disqus_url = href;
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

@@ -17,6 +17,9 @@
 (setq postamble (with-temp-buffer
                   (insert-file-contents "html/postamble.html")
                   (buffer-string)))
+(setq header (with-temp-buffer
+                  (insert-file-contents "html/header.html")
+                  (buffer-string)))
 (defun set-org-publish-project-alist ()
   "Set publishing projects for Orgweb and Worg."
   (interactive)
@@ -26,7 +29,7 @@
         :base-directory ,blog-path
         :base-extension "org"
         :html-doctype "html5"
-        :html-head "<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"stylesheet\" href=\"/style/pixyll.css\"/><link rel=\"alternate\" type=\"application/rss+xml\" title=\"Jichao Ouyang\" href=\"http://blog.oyanglul.us/index.xml\"/>"
+        :html-head ,header
         :html-html5-fancy t
         :html-postamble ,postamble
         ;; HTML directory

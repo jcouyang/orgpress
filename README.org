@@ -5,27 +5,27 @@
 
 * TL;DR Why another Org Mode Blog Generator
 
-** 1. This is a *really* *really simple* blog generator
+** This is a *really* *really simple* blog generator
 so you can focus on writting
 
 only thing you need to do is adding =org= or =markdown= files into =org= folder and =git push=, no more =C-c C-e P f=
-** 2. You Don't need to learn EMACS...and Travis-ci will do all the job
-just focus on writting, travis ci will take care of everything 
+** ...and Travis-ci will do it's job
+travis ci will take care of everything 
 - =(org-publish-all)=
 - =git push= to github pages
-** 3. You Don't need to know =Ruby= to build a Blog
+** You Don't need to know =Ruby= to build a Blog
 
-** 4. Github Favored Markdown support
+** Github Favored Markdown support
 
-** 5. Disqus comment system
+** also disqus comment system
 everthing you want to custom can be added to =html/postamble.html=
-** 6. RSS
-
-** 7. Site Search
+** RSS
+rss is generate from /Yahoo Pipes/, [[https://github.com/jcouyang/blog/blob/5317c8fc3859b735cca5b4404ed1be1ed7f6a582/html/postamble.html#L4][here]] is where I place my RSS link
+** Site Search
 using [[http://swiftype.com/]]
 
 * Live Demo
-[https://blog.oyanglul.us]
+[[https://blog.oyanglul.us]]
 
 * OK here is the Magic
 https://github.com/jcouyang/orgpress/blob/master/emacs.el
@@ -34,23 +34,28 @@ https://github.com/jcouyang/orgpress/blob/master/emacs.el
 there're few places you need to customize for you own blog
 
 ** Deploy Key
-https://github.com/jcouyang/orgpress/orgpress/master/deploy.enc
+https://github.com/jcouyang/blog/blob/master/deploy.enc
 
 this is my encrypted deploy key so you better generate your own.
 
 here's how
 
-1. =ssh-keygen=: 
+*** =ssh-keygen=
  with name deploy or somthing you like, I named it deploy
-2. =gem install travis=
-3. =travis login=
-4. =travis encrypt-file deploy --add=:
-this will generate encrypted version of =deploy= file. Make sure not to add =deploy= to the git repository. only add =deploy.enc=. the option =--add= will add something like [[https://github.com/jcouyang/blog/blob/master/.travis.yml#L6][this]] to your =.travis.yml= file, which is the decrypt step running on travis ci, so make sure it's at least before =before_script= step
-5. =cat deploy.pub | pbcopy=
-6. open the github repo you wanna publish as github pages > Settings > Deploy keys
-7.  =PASTE=
+*** =gem install travis=
+*** =travis login=
+*** =travis encrypt-file deploy --add=
+this will generate encrypted version of =deploy= file.
+
+Make sure not to add =deploy= to the git repository. only add =deploy.enc=
+
+the option =--add= will add something like [[https://github.com/jcouyang/blog/blob/master/.travis.yml#L6][this]] to your =.travis.yml= file, which is the decrypt step running on travis ci, so make sure it's at least before =before_script= step
+*** =cat deploy.pub | pbcopy=
+*** open the github repo you wanna publish as github pages > Settings > Deploy keys
+*** =PASTE=
+
 ** =config.el=
-fill your info
+fill as you like
 
 ** Disqus, Google Analystics and Swiftype
 https://github.com/jcouyang/orgpress/blob/master/html/postamble.html
