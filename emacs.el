@@ -50,7 +50,6 @@
         :blog-export-dates t
         :sitemap-date-format ,config-date-format
         :blog-title ,config-blog-title
-        :makeindex t
         :html-head-include-default-style nil
         )
 
