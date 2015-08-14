@@ -12,7 +12,6 @@ dependencies:
     - if [[ ! -e pandoc-1.13.2-1-amd64.deb ]]; then wget https://github.com/jgm/pandoc/releases/download/1.13.2/pandoc-1.13.2-1-amd64.deb;fi
     - sudo dpkg -i pandoc-1.13.2-1-amd64.deb && curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python && export PATH="$HOME/.cask/bin:$PATH"
     - cask install
-    - wget https://github.com/$USER/$REPO/archive/master.zip org
 test:
   pre:
     - ci/publish.sh
