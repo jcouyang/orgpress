@@ -8,6 +8,7 @@
 (require 'org-blog)
 (require 'htmlize)
 (setq debug-on-error t)
+(setq make-backup-files nil) ; stop creating those backup~ file
 (setq blog-path (expand-file-name "source"))
 (setq org-html-validation-link nil)
 (setq org-confirm-babel-evaluate nil)
@@ -41,7 +42,7 @@
         :auto-preamble t
         :auto-sitemap t
         :sitemap-filename "index.org"
-        :exclude "\!.*\.org"
+        :exclude "\~.*\.org"
         :sitemap-function org-blog-export
         :blog-entry-format ,config-entry-format
         :blog-export-dates t
