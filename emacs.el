@@ -8,7 +8,7 @@
 (require 'org-blog)
 (require 'htmlize)
 (setq debug-on-error t)
-(setq blog-path (expand-file-name "org"))
+(setq blog-path (expand-file-name "source"))
 (setq org-html-validation-link nil)
 (setq org-confirm-babel-evaluate nil)
 (custom-set-variables
