@@ -1,0 +1,10 @@
+#+TITLE: Jichao Ouyang's Blog
+
+#+OPTIONS: toc:nil
+* Archive
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: year
+:END:
+
+** Jul 2015
+  + [[file:understand-prototype.org][理解JavaScript的原型链和继承]]
