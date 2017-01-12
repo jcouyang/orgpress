@@ -1,0 +1,28 @@
+#+TITLE: Jichao Ouyang's Blog
+
+#+OPTIONS: toc:nil
+
+* [[file:helloworld.org][About Me]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blogentry
+:RSS_PERMALINK: helloworld.html
+:PUBDATE: <1986-02-01 Sat>
+:ID:       91f9a4ac-4d0e-45f2-9c27-e776b0cc7dd8
+:END:
+/Feb 01, 1986/
+
+  不会 Haskell 的 Scala 程序员写不出好的 JavaScript
+  Hi, I'm programmer who program =JavaScript=, =Ruby=, sometime even =Scala= for living, meanwhile also play =Clojure/Script=, =Haskell= and my own language =rù= for *fun*.
+  If you want to find/ping me, I'm always available on
+** Projects
+   :PROPERTIES:
+   :ID:       5de94394-6d71-4f8d-a275-73be833dc21c
+   :END:
+** Books
+   :PROPERTIES:
+   :ID:       317efd46-c80e-4300-8f03-11102baf5bae
+   :END:
+
+
+[[file:helloworld.org][Read More...]]
+-------

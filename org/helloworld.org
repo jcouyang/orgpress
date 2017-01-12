@@ -1,0 +1,39 @@
+#+TITLE: About Me
+#+DATE: <1986-02-01 Sat>
+
+#+BEGIN_CENTER
+不会 Haskell 的 Scala 程序员写不出好的 JavaScript
+#+END_CENTER
+
+Hi, I'm programmer who program =JavaScript=, =Ruby=, sometime even =Scala= for living, meanwhile also play =Clojure/Script=, =Haskell= and my own language =rù= for *fun*.
+
+If you want to find/ping me, I'm always available on
+#+html: <a aria-label="Follow @jcouyang on GitHub" data-count-aria-label="# followers on GitHub" data-count-api="/users/jcouyang#followers" data-count-href="/jcouyang/followers" href="https://github.com/jcouyang" class="github-button">Follow @jcouyang</a>, <a href="https://twitter.com/oyanglulu" class="twitter-follow-button" data-show-count="false">Follow @oyanglulu</a>, <a href="http://www.linkedin.com/profile/view?id=75693502">Linkedin</a>, <a href="http://weibo.com/milhouse">Weibo</a> and  <a href="mailto:oyanglulu@gmail.com">Gmail</a>
+
+* Projects
+#+html: <div id="github-widget" data-user="jcouyang" data-display="pop_repos,contribution,calendar"></div><script src="https://gh-widget.oyanglul.us/index.js"></script>
+
+* Books
+
+** [[https://book.douban.com/subject/26883736/][https://img3.doubanio.com/lpic/s29070174.jpg]] ([[https://github.com/jcouyang/clojure-flavored-javascript][源码]])
+** [[https://book.douban.com/subject/26579320/][https://img1.doubanio.com/lpic/s28263518.jpg]]
+
+* Talks
+
+** [[https://blog.oyanglul.us/slides/essential-ecmascript-2017.html][Essential EcmaScript 2017]]
+** [[https://blog.oyanglul.us/slides/functional-ruby.html][Functional Ruby]]
+** [[https://blog.oyanglul.us/javascript/practical-monads.html][Practical Monads]]
+** [[https://gistdeck.github.com/jcouyang/03121932d18eba44088e][理解原型链和继承]]
+** [[https://www.icloud.com/keynote/AwBUCAESEAdZO1i1w_FOM7bcc32s_-saKSNGkgh098jFV4ORqDf8BTBZ7eVCJjSBMtdPflzOJzzwvNC4GzME3bkEMCUCAQEEIM4xb9-JzzQWp20MKTFuTvCNxWcKsltpmOLy_I9InjAJ#learn%252C_write%252C_publish][Learn, Write, Publish]]
+** [[http://git.io/js-csp][JavaScript并发 与 core.async]]
+** [[http://git.io/why-curry-helps][Why curry helps]]
+
+* Blog [[http://blog.oyanglul.us]]
+
+#+INCLUDE: "./archive.org" :lines "8-" :minlevel 2
+
+#+html: <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
+
+#+html: <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+#+html: <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

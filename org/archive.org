@@ -6,5 +6,5 @@
 :HTML_CONTAINER_CLASS: year
 :END:
 
-** Jul 2015
-  + [[file:understand-prototype.org][理解JavaScript的原型链和继承]]
+** Feb 1986
+  + [[file:helloworld.org][About Me]]
