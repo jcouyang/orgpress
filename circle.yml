@@ -1,0 +1,10 @@
+general:
+  branches:
+    only:
+      - master
+machine:
+  services:
+    - docker
+test:
+  post:
+    - ./compile
