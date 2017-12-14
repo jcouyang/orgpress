@@ -81,14 +81,14 @@
        ;; where static files (images, pdfs) are stored
        ("blog-static"
          :base-directory ,blog-path
-         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|woff2\\|woff"
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|svg\\|pdf\\|mp3\\|woff2\\|woff"
          :publishing-directory "public"
          :recursive t
          :publishing-function org-publish-attachment
          )
        ("assets"
          :base-directory ,assets-path
-         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|woff2\\|woff\\|html\\|md\\|ico"
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|svg\\|pdf\\|mp3\\|woff2\\|woff\\|html\\|md\\|ico"
          :publishing-directory "public"
          :recursive t
          :publishing-function org-publish-attachment
