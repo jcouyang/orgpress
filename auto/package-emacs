@@ -1,2 +1,0 @@
-#!/bin/bash -e
-docker build . -f Dockerfile.emacs -t jcouyang/emacs

@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run -v $(pwd):/emacs/source:rw -v $(pwd)/public:/emacs/public:rw jcouyang/orgpress
+docker run --rm -v $(pwd):/orgpress jcouyang/orgpress
