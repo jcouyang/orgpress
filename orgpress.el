@@ -43,7 +43,7 @@ representation for the files to include, as returned by
             (org-list-to-subtree
              (seq-filter
               (apply-partially
-               (lambda (x) (not (string-match-p "theindex\.org" (first x) )))) (rest list)))))
+               (lambda (x) (not (string-match-p "theindex\.org" (format "%s" x) )))) list))))
 
 (defun my-sitemap-format (entry style project)
   "Custom sitemap entry formatting"
