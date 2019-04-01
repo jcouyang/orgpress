@@ -1,4 +1,0 @@
-#+TITLE: Hello World
-#+DATE: <1986-02-01 Sat>
-
-#+INCLUDE: "https://raw.githubusercontent.com/jcouyang/blog/master/org/jichao.ouyang.org"

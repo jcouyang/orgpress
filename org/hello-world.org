@@ -1,0 +1,36 @@
+#+TITLE: Hello World
+#+AUTHOR: Jichao Ouyang
+#+DATE: <1986-02-01 Sat>
+#+DESCRIPTION: this is description
+#+KEYWORDS: and,some,keywords
+#+INDEX: Tag!Hello World
+
+* Source Code
+
+#+BEGIN_SRC scala
+   trait AlgInterp[F[_]] {
+     val state: F[Int]
+     def log(msg: String): F[Unit]
+     def query[A](c: ConnectionIO[A]): F[A]
+   }
+
+   type Alg[F[_], A] = ReaderT[F, AlgInterp[F], A]
+
+   def state[F[_]]: Alg[F, Int] = Kleisli(_.state)
+   def log[F[_]](msg: String): Alg[F, Unit] = Kleisli(_.log(msg))
+
+   def doobieQuery[F[_], A](query: ConnectionIO[A]): Alg[F, A]
+
+   def program[F[_]]: Alg[F, Int] = for {
+     env <- state
+     _ <- log(s"initState is: $state")
+     valueInDatabase <- doobieQuery(sql"select 32".query[Int].unique).handleError{_=>0}
+   } yield initState + valueInDatabase
+
+  val interp = new AlgInterp[IO]{
+     val state = IO(1)
+     def log(msg: String) = IO(getLogger.log(msg))
+     def query[A](c: ConnectionIO[A]) = c.transact(xa)
+   }
+   program[IO].run(interp).unsafeRunSync()
+#+END_SRC

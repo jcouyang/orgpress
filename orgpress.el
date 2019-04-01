@@ -13,15 +13,13 @@
 (require 'htmlize)
 (require 'ox-rss)
 
-(load-file "config.el")
 (setq make-backup-files nil)
 (setq debug-on-error t)
-(setq blog-path (expand-file-name "org"))
-(setq assets-path (expand-file-name "assets"))
 (setq org-html-validation-link nil)
 (setq org-confirm-babel-evaluate nil)
 (url-handler-mode 1)
-(setq user-mail-address "oyanglulu@gmail.com")
+
+(load-file "config.el")
 ;;(setq org-export-babel-evaluate nil)
 (custom-set-variables
   '(org-publish-timestamp-directory
@@ -42,45 +40,14 @@ TITLE is the the title of the site map.  LIST is an internal
 representation for the files to include, as returned by
 `org-list-to-lisp'.  PROJECT is the current project."
   (concat "#+TITLE:" config-blog-title "\n" "#+OPTIONS: toc:nil\n\n"
-	  (org-list-to-subtree (rest list))))
-(defun my-org-publish-find-property (file property project &optional backend)
-  "Find the PROPERTY of FILE in project.
+	  (org-list-to-subtree list)))
 
-PROPERTY is a keyword referring to an export option, as defined
-in `org-export-options-alist' or in export back-ends.  In the
-latter case, optional argument BACKEND has to be set to the
-back-end where the option is defined, e.g.,
-
-  (org-publish-find-property file :subtitle 'latex)
-
-Return value may be a string or a list, depending on the type of
-PROPERTY, i.e. \"behavior\" parameter from `org-export-options-alist'."
-  (let ((file (org-publish--expand-file-name file project)))
-    (when (and (file-readable-p file) (not (directory-name-p file)))
-      (let* ((org-inhibit-startup t)
-	     (visiting (find-buffer-visiting file))
-	     (buffer (or visiting (find-file-noselect file))))
-	(unwind-protect
-	    (with-current-buffer buffer
-			 (if (not visiting) (org-export-get-environment backend)
-			   ;; Protect local variables in open buffers.
-			   (org-export-with-buffer-copy
-			    (org-export-get-environment backend))))
-	  (unless visiting (kill-buffer buffer)))))))
 (defun my-sitemap-format (entry style project)
   "Custom sitemap entry formatting"
   (if (not (directory-name-p entry))
-    (format-spec "
-[[%l][%t]]
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: blogentry
-:RSS_PERMALINK: %L
-:PUBDATE: %D
-:END:
-%c" `((?t . ,(org-publish-find-title entry project))
+    (format-spec config-entry-format `((?t . ,(org-publish-find-title entry project))
                  (?D . ,(format-time-string "<%Y-%m-%d %a>" (org-publish-find-date entry project)))
                  (?c . ,(org-publish-find-property entry :description project 'html))
-                 ;;(?k . ,(mapconcat (lambda (x) (format "=%s=" x)) (split-string (or (org-publish-find-property entry :keywords project 'html) "") ",") " "))
                  (?l . ,(concat "file:" entry))
                  (?L . ,(replace-regexp-in-string "\.org" "\.html" entry))
                  ))
@@ -117,7 +84,7 @@ PROPERTY, i.e. \"behavior\" parameter from `org-export-options-alist'."
         :sitemap-filename "index.org"
         :exclude "\!.*\.org"
         :sitemap-date-format ,config-date-format
-        :makeindex nil
+        :makeindex t
         :html-head-include-default-style nil
         )
 
