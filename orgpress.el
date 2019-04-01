@@ -40,7 +40,10 @@ TITLE is the the title of the site map.  LIST is an internal
 representation for the files to include, as returned by
 `org-list-to-lisp'.  PROJECT is the current project."
   (concat "#+TITLE:" config-blog-title "\n" "#+OPTIONS: toc:nil\n\n"
-	  (org-list-to-subtree list)))
+            (org-list-to-subtree
+             (seq-filter
+              (apply-partially
+               (lambda (x) (not (string-match-p "theindex\.org" (first x) )))) (rest list)))))
 
 (defun my-sitemap-format (entry style project)
   "Custom sitemap entry formatting"
