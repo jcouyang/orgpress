@@ -1,18 +1,18 @@
 # Dockerized Org Blog Generator
 
-* TLDR
+# TLDR
 fork this repo and clone
 
 ```sh
 ./compile
 ```
 
-* Prerequisite
+# Prerequisite
  - [Docker](https://www.docker.com/get-started)
 
-* Configuration
+# Configuration
 
-** variables in `config.el`
+## variables in `config.el`
 
 - `config-blog-title`: you blog title
 - `config-base-url`: base url
@@ -26,10 +26,10 @@ fork this repo and clone
 (?L . ,(replace-regexp-in-string "\.org" "\.html" entry))
 ```
 
-* header and footer html template
+# header and footer html template
 - `html/preamble.html`: header
 - `html/postamble.html`: footer
 - `html/header.html`: custom content inside `<head/>`
 
-* Live Demo
+# Live Demo
 https://blog.oyanglul.us
