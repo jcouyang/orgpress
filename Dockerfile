@@ -4,4 +4,5 @@ WORKDIR /orgpress
 COPY orgpress.setup.el .
 RUN emacs -batch -l orgpress.setup.el
 COPY orgpress.el .
-CMD emacs -batch -l orgpress.el -f org-publish-all
+WORKDIR /blog
+CMD emacs -batch -l /orgpress/orgpress.el -f org-publish-all

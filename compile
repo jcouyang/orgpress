@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run --rm -v $(pwd):/orgpress jcouyang/orgpress
+docker run --rm -v $(pwd):/blog jcouyang/orgpress

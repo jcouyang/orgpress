@@ -7,6 +7,7 @@
 (require 'org)
 (require 'scala-mode)
 (require 'haskell-mode)
+(require 'diff-mode)
 (require 'clojure-mode)
 (require 'ob-shell)
 (require 'ob-ruby)
@@ -14,7 +15,7 @@
 (require 'ox-rss)
 
 (setq make-backup-files nil)
-(setq debug-on-error t)
+(setq debug-on-error nil)
 (setq org-html-validation-link nil)
 (setq org-confirm-babel-evaluate nil)
 (url-handler-mode 1)
