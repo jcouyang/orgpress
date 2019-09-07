@@ -17,3 +17,4 @@
 (package-install 'htmlize)
 (package-install 'color-theme-modern)
 (package-install 'clojure-mode)
+(package-install 'purescript-mode)

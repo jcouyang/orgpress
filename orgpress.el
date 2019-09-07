@@ -9,6 +9,7 @@
 (require 'haskell-mode)
 (require 'diff-mode)
 (require 'clojure-mode)
+(require 'purescript-mode)
 (require 'ob-shell)
 (require 'ob-ruby)
 (require 'htmlize)
