@@ -15,10 +15,11 @@ jobs:
         path: public
     - run: |
         rm -rf public/*
+        rm -rf public/.org-timestamps
         docker run --rm -v $(pwd):/blog jcouyang/orgpress
         cd public
         git add .
         git config user.email "oyanglulu@gmail.com"
         git config user.name "orgpress"
-        git commit -m "test"
+        git commit -m "orgpress publish"
         git push origin gh-pages
