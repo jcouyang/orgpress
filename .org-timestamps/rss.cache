@@ -1,5 +1,5 @@
 (setq org-publish-cache (make-hash-table :test 'equal :weakness nil :size 100))
 (puthash ":project:" "rss" org-publish-cache)
 (puthash ":cache-file:" "/blog/public/.org-timestamps/rss.cache" org-publish-cache)
-(puthash "/blog/org/index.org" '(:crossrefs (((other "[[file:hello-world.org][Hello" "World]]") . 78161865) ((headline "[[file:hello-world.org][Hello" "World]]") . 78161865)) :index nil) org-publish-cache)
-(puthash "Xb62603b9c53219def1f11a83ff47ff91c4f78ec4" '(24164 18248 97348 317000) org-publish-cache)
+(puthash "/blog/org/index.org" '(:crossrefs (((other "[[file:hello-world.org][Hello" "World]]") . 52470052) ((headline "[[file:hello-world.org][Hello" "World]]") . 52470052)) :index nil) org-publish-cache)
+(puthash "Xb62603b9c53219def1f11a83ff47ff91c4f78ec4" '(24164 18634 390688 607000) org-publish-cache)
