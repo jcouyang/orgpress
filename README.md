@@ -1,6 +1,6 @@
 # Org Blog Generator
 
-<a href="https://github.com/jcouyang/orgpress/actions"><img alt="jcouyang/orgpress status" src="https://github.com/jcouyang/orgpress/workflows/publish/badge.svg"></a>
+<a href="https://github.com/jcouyang/orgpress/actions"><img alt="jcouyang/orgpress status" src="https://github.com/actions/javascript-action/workflows/units-test/badge.svg"></a>
 
 # TLDR
 fork this repo and clone
