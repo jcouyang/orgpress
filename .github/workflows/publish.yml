@@ -14,5 +14,8 @@ jobs:
         ref: gh-pages
         path: public
     - run: |
-        ls
-        ls public
+        cd public
+        touch hehe
+        git add hehe
+        git commit -m "test"
+        git push origin gh-pages
