@@ -9,51 +9,32 @@
      xmlns:georss="http://www.georss.org/georss"
      xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
      xmlns:media="http://search.yahoo.com/mrss/"><channel>
-  <title>(Jichao Ouyang's Blog)</title>
-  <atom:link href="http://blog.oyanglul.us/index.xml" rel="self" type="application/rss+xml" />
-  <link>http://blog.oyanglul.us</link>
+  <title>Orgpress Blog</title>
+  <atom:link href="https://blog.oyanglul.us/index.xml" rel="self" type="application/rss+xml" />
+  <link>https://blog.oyanglul.us</link>
   <description><![CDATA[]]></description>
   <language>en</language>
-  <pubDate>Fri, 14 Aug 2015 14:16:31 +0000</pubDate>
-  <lastBuildDate>Fri, 14 Aug 2015 14:16:31 +0000</lastBuildDate>
-  <generator>Emacs 24.5 Org-mode 8.3.1</generator>
-  <webMaster>ubuntu@box934 (nil)</webMaster>
+  <pubDate>Sun, 08 Mar 2020 01:15:52 +0000</pubDate>
+  <lastBuildDate>Sun, 08 Mar 2020 01:15:52 +0000</lastBuildDate>
+  <generator>Emacs 26.3 Org-mode 9.3.6</generator>
+  <webMaster>oyanglulu@gmail.com (root)</webMaster>
   <image>
-    <url>http://orgmode.org/img/org-mode-unicorn-logo.png</url>
-    <title>(Jichao Ouyang's Blog)</title>
-    <link>http://blog.oyanglul.us</link>
+    <url>https://orgmode.org/img/org-mode-unicorn-logo.png</url>
+    <title>Orgpress Blog</title>
+    <link>https://blog.oyanglul.us</link>
   </image>
 
 
   <item>
-    <title>Welcome to OrgPress</title>
-    <link>http://blog.oyanglul.us/orgpress-source/hello-world.html</link>
-    <author>nil</author>
-    <guid isPermaLink="false">http://blog.oyanglul.us/orgpress-source/hello-world.html</guid>
-    <pubDate>Fri, 14 Aug 2015 00:00:00 +0000</pubDate>
+    <title>file:hello-world.org</title>
+    <link>https://blog.oyanglul.us/hello-world.html</link>
+    <author>oyanglulu@gmail.com (root)</author>
+    <guid isPermaLink="false">https://blog.oyanglul.us/hello-world.html</guid>
+    <pubDate>Sat, 01 Feb 1986 00:00:00 +0000</pubDate>
 
     <description><![CDATA[<p>
-    <i>Aug 14, 2015</i>
-  </p>
-
-
-  <hr  />
-    ]]></description>
-  </item>
-
-  <item>
-    <title>理解JavaScript的原型链和继承</title>
-    <link>http://blog.oyanglul.us/understand-prototype.html</link>
-    <author>nil</author>
-    <guid isPermaLink="false">http://blog.oyanglul.us/understand-prototype.html</guid>
-    <pubDate>Fri, 03 Jul 2015 00:00:00 +0000</pubDate>
-
-    <description><![CDATA[<p>
-    <i>Jul 03, 2015</i>
-  </p>
-
-
-  <hr  />
+    this is description
+    </p>
     ]]></description>
   </item>
 </channel>

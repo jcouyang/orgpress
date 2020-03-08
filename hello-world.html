@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<!-- 2020-03-08 Sun 01:15 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hello World</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Jichao Ouyang">
+<meta name="description" content="this is description"
+>
+<meta name="keywords" content="and,some,keywords">
+<link rel="icon" href="/favicon.ico">
+<meta name="theme-color" content="#ffffff">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/style/toc.css"/>
+<link rel="stylesheet" href="/style/tufte.css"/>
+<link rel="alternate" type="application/rss+xml" title="Jichao Ouyang" href="https://feeds.oyanglul.us/JichaoOuyangsBlog"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJRFJGX"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header>
+    <a accesskey="h" href="/index.html"> HOME </a> |
+    <a href="#" id="edit-in-github">EDIT</a> |
+    <a href="https://feeds.oyanglul.us/JichaoOuyangsBlog">RSS</a> |
+    <a accesskey="H" href="/jichao.ouyang.html">ABOUT</a> |
+    <a href="https://github.com/jcouyang/blog">GITHUB</a>
+</header>
+</div>
+<div id="content">
+<header>
+<h1 class="title">Hello World</h1>
+</header><nav id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org1b5bd40">Source Code</a></li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-org1b5bd40" class="outline-2">
+<h2 id="org1b5bd40">Source Code</h2>
+<div class="outline-text-2" id="text-org1b5bd40">
+<pre class="code"><code> <span style="color: #00008b;">trait</span> <span style="color: #36648b;">AlgInterp</span>[<span style="color: #6b8e23;">F</span>[<span style="color: #00008b;">_</span>]] {
+   <span style="color: #00008b;">val</span> <span style="color: #b8860b;">state</span><span style="color: #00008b;">:</span> <span style="color: #36648b;">F</span>[<span style="color: #6b8e23;">Int</span>]
+   <span style="color: #00008b;">def</span> <span style="color: #6a5acd;">log</span>(msg<span style="color: #00008b;">:</span> <span style="color: #36648b;">String</span>)<span style="color: #00008b;">:</span> <span style="color: #36648b;">F</span>[<span style="color: #6b8e23;">Unit</span>]
+   <span style="color: #00008b;">def</span> <span style="color: #6a5acd;">query</span>[<span style="color: #6b8e23;">A</span>](c<span style="color: #00008b;">:</span> <span style="color: #36648b;">ConnectionIO</span>[<span style="color: #6b8e23;">A</span>])<span style="color: #00008b;">:</span> <span style="color: #36648b;">F</span>[<span style="color: #6b8e23;">A</span>]
+ }
+
+ <span style="color: #00008b;">type</span> <span style="color: #6b8e23;">Alg</span>[<span style="color: #6b8e23;">F</span>[<span style="color: #00008b;">_</span>], <span style="color: #6b8e23;">A</span>] <span style="color: #00008b;">=</span> <span style="color: #6b8e23;">ReaderT</span>[<span style="color: #6b8e23;">F</span>, <span style="color: #6b8e23;">AlgInterp</span>[<span style="color: #6b8e23;">F</span>], <span style="color: #6b8e23;">A</span>]
+
+ <span style="color: #00008b;">def</span> <span style="color: #6a5acd;">state</span>[<span style="color: #6b8e23;">F</span>[<span style="color: #00008b;">_</span>]]<span style="color: #00008b;">:</span> <span style="color: #36648b;">Alg</span>[<span style="color: #6b8e23;">F</span>, <span style="color: #6b8e23;">Int</span>] <span style="color: #00008b;">=</span> <span style="color: #6b8e23;">Kleisli</span>(<span style="color: #00008b;">_</span>.state)
+ <span style="color: #00008b;">def</span> <span style="color: #6a5acd;">log</span>[<span style="color: #6b8e23;">F</span>[<span style="color: #00008b;">_</span>]](msg<span style="color: #00008b;">:</span> <span style="color: #36648b;">String</span>)<span style="color: #00008b;">:</span> <span style="color: #36648b;">Alg</span>[<span style="color: #6b8e23;">F</span>, <span style="color: #6b8e23;">Unit</span>] <span style="color: #00008b;">=</span> <span style="color: #6b8e23;">Kleisli</span>(<span style="color: #00008b;">_</span>.log(msg))
+
+ <span style="color: #00008b;">def</span> <span style="color: #6a5acd;">doobieQuery</span>[<span style="color: #6b8e23;">F</span>[<span style="color: #00008b;">_</span>], <span style="color: #6b8e23;">A</span>](query<span style="color: #00008b;">:</span> <span style="color: #36648b;">ConnectionIO</span>[<span style="color: #6b8e23;">A</span>])<span style="color: #00008b;">:</span> <span style="color: #36648b;">Alg</span>[<span style="color: #6b8e23;">F</span>, <span style="color: #6b8e23;">A</span>]
+
+ <span style="color: #00008b;">def</span> <span style="color: #6a5acd;">program</span>[<span style="color: #6b8e23;">F</span>[<span style="color: #00008b;">_</span>]]<span style="color: #00008b;">:</span> <span style="color: #36648b;">Alg</span>[<span style="color: #6b8e23;">F</span>, <span style="color: #6b8e23;">Int</span>] <span style="color: #00008b;">=</span> <span style="color: #00008b;">for</span> {
+   env <span style="color: #00008b;">&lt;-</span> state
+   <span style="color: #00008b;">_</span> <span style="color: #00008b;">&lt;-</span> log(s<span style="color: #8b0000;">"initState is: </span><span style="color: #b8860b;">$state</span><span style="color: #8b0000;">"</span>)
+   valueInDatabase <span style="color: #00008b;">&lt;-</span> doobieQuery(sql<span style="color: #8b0000;">"select 32"</span>.query[<span style="color: #6b8e23;">Int</span>].unique).handleError{<span style="color: #00008b;">_=&gt;</span><span style="color: #6b8e23;">0</span>}
+ } <span style="color: #00008b;">yield</span> initState + valueInDatabase
+
+<span style="color: #00008b;">val</span> <span style="color: #b8860b;">interp</span> <span style="color: #00008b;">=</span> <span style="color: #00008b;">new</span> <span style="color: #36648b;">AlgInterp</span>[<span style="color: #6b8e23;">IO</span>]{
+   <span style="color: #00008b;">val</span> <span style="color: #b8860b;">state</span> <span style="color: #00008b;">=</span> <span style="color: #6b8e23;">IO</span>(<span style="color: #6b8e23;">1</span>)
+   <span style="color: #00008b;">def</span> <span style="color: #6a5acd;">log</span>(msg<span style="color: #00008b;">:</span> <span style="color: #36648b;">String</span>) <span style="color: #00008b;">=</span> <span style="color: #6b8e23;">IO</span>(getLogger.log(msg))
+   <span style="color: #00008b;">def</span> <span style="color: #6a5acd;">query</span>[<span style="color: #6b8e23;">A</span>](c<span style="color: #00008b;">:</span> <span style="color: #36648b;">ConnectionIO</span>[<span style="color: #6b8e23;">A</span>]) <span style="color: #00008b;">=</span> c.transact(xa)
+ }
+ program[<span style="color: #6b8e23;">IO</span>].run(interp).unsafeRunSync()
+</code></pre>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<footer>
+  <p>Author: Jichao Ouyang <a aria-label="Follow @jcouyang on GitHub" data-count-aria-label="# followers on GitHub" data-count-api="/users/jcouyang#followers" data-count-href="/jcouyang/followers" href="https://github.com/jcouyang" class="github-button">Follow @jcouyang</a></p>
+  <p>Modified: 2020-03-08 Sun 01:15</p>
+  <p>Generated by: <a href="https://www.gnu.org/software/emacs/">Emacs</a> 26.3 (<a href="https://orgmode.org">Org</a> mode 9.3.6) &#215; <a href="https://github.com/jcouyang/orgpress">OrgPress</a></p>
+</footer>
+</div>
+</body>
+</html>

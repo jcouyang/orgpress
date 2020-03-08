@@ -1,0 +1,3 @@
+(setq org-publish-cache (make-hash-table :test 'equal :weakness nil :size 100))
+(puthash ":project:" "assets" org-publish-cache)
+(puthash ":cache-file:" "/blog/public/.org-timestamps/assets.cache" org-publish-cache)
