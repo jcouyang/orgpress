@@ -14,9 +14,10 @@ jobs:
         ref: gh-pages
         path: public
     - run: |
+        rm -rf public/*
+        docker run --rm -v $(pwd):/blog jcouyang/orgpress
         cd public
-        touch hehe
-        git add hehe
+        git add .
         git config user.email "oyanglulu@gmail.com"
         git config user.name "orgpress"
         git commit -m "test"
