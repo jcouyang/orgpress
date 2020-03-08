@@ -18,4 +18,6 @@ jobs:
         touch hehe
         git add hehe
         git commit -m "test"
+        git config --global user.email "oyanglulu@gmail.com"
+        git config --global user.name "orgpress"
         git push origin gh-pages
