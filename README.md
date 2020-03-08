@@ -1,4 +1,6 @@
-# Dockerized Org Blog Generator
+# Org Blog Generator
+
+<a href="https://github.com/jcouyang/orgpress/actions"><img alt="jcouyang/orgpress status" src="https://github.com/jcouyang/orgpress/workflows/publish/badge.svg"></a>
 
 # TLDR
 fork this repo and clone
@@ -6,6 +8,10 @@ fork this repo and clone
 ```sh
 ./compile
 ```
+
+# Or Publish to Gh-pages using Actions
+
+https://github.com/jcouyang/orgpress/blob/master/.github/workflows/publish.yml
 
 # Prerequisite
  - [Docker](https://www.docker.com/get-started)
