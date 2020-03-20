@@ -10,10 +10,12 @@
 (package-initialize) ;; You might already have this line
 (package-refresh-contents)
 
+(package-install 'quelpa)
+(require 'quelpa)
+(quelpa '(ox-tufte :repo "jcouyang/ox-tufte" :fetcher github))
 (package-install 'org-plus-contrib)
 (package-install 'scala-mode)
 (package-install 'haskell-mode)
-(package-install 'ox-tufte)
 (package-install 'htmlize)
 (package-install 'color-theme-modern)
 (package-install 'clojure-mode)
