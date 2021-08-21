@@ -25,15 +25,15 @@
 ;;(setq org-export-babel-evaluate nil)
 (custom-set-variables
   '(org-publish-timestamp-directory
-     (convert-standard-filename "public/.org-timestamps/")))
+     (convert-standard-filename "/blog/public/.org-timestamps/")))
 (setq postamble (with-temp-buffer
-                  (insert-file-contents "html/postamble.html")
+                  (insert-file-contents "/blog/html/postamble.html")
                   (buffer-string)))
 (setq preamble (with-temp-buffer
-                  (insert-file-contents "html/preamble.html")
+                  (insert-file-contents "/blog/html/preamble.html")
                   (buffer-string)))
 (setq header (with-temp-buffer
-                  (insert-file-contents "html/header.html")
+                  (insert-file-contents "/blog/html/header.html")
                (buffer-string)))
 
 (defun my-publish-sitemap (title list)
