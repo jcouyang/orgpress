@@ -2,12 +2,11 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, nixify ]
 
 jobs:
   build-docker:
     runs-on: ubuntu-latest
-    # if: "github.ref == 'refs/heads/master'"
     permissions:
       packages: write
     steps:
