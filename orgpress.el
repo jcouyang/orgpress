@@ -21,7 +21,7 @@
 (setq org-confirm-babel-evaluate nil)
 (url-handler-mode 1)
 
-(load-file "config.el")
+(load-file "/blog/config.el")
 ;;(setq org-export-babel-evaluate nil)
 (custom-set-variables
   '(org-publish-timestamp-directory

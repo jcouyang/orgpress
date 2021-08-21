@@ -14,9 +14,7 @@ let
     orgpress = super.melpaBuild {
       pname = "orgpress";
       version = "0.0.1";
-      src = fetchTarball {
-        url = "https://github.com/jcouyang/orgpress/archive/master.tar.gz";
-      };
+      src = ./.;
       recipe = pkgs.writeText "recipe" ''
         (orgpress :fetcher github :repo "jcouyang/orgpress")
         '';
