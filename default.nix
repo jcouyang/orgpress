@@ -22,7 +22,7 @@ let
         '';
     };
   };
-  emacsWithPackages = ((pkgs.emacsPackagesGen pkgs.emacs).overrideScope' overrides).emacsWithPackages;
+  emacsWithPackages = ((pkgs.emacsPackagesGen pkgs.emacs-nox).overrideScope' overrides).emacsWithPackages;
   myEmacs = emacsWithPackages (epkgs: (with epkgs.melpaPackages; [
     epkgs.orgpress
     scala-mode
