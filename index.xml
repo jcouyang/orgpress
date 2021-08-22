@@ -14,10 +14,10 @@
   <link>https://blog.oyanglul.us</link>
   <description><![CDATA[]]></description>
   <language>en</language>
-  <pubDate>Fri, 20 Mar 2020 01:29:07 +0000</pubDate>
-  <lastBuildDate>Fri, 20 Mar 2020 01:29:07 +0000</lastBuildDate>
-  <generator>Emacs 26.3 Org-mode 9.3.6</generator>
-  <webMaster>oyanglulu@gmail.com (root)</webMaster>
+  <pubDate>Sun, 22 Aug 2021 04:12:15 +0000</pubDate>
+  <lastBuildDate>Sun, 22 Aug 2021 04:12:15 +0000</lastBuildDate>
+  <generator>Emacs 27.2 Org-mode 9.4.6</generator>
+  <webMaster>oyanglulu@gmail.com (unknown)</webMaster>
   <image>
     <url>https://orgmode.org/img/org-mode-unicorn-logo.png</url>
     <title>Orgpress Blog</title>
@@ -28,7 +28,7 @@
   <item>
     <title>file:hello-world.org</title>
     <link>https://blog.oyanglul.us/hello-world.html</link>
-    <author>oyanglulu@gmail.com (root)</author>
+    <author>oyanglulu@gmail.com (unknown)</author>
     <guid isPermaLink="false">https://blog.oyanglul.us/hello-world.html</guid>
     <pubDate>Sat, 01 Feb 1986 00:00:00 +0000</pubDate>
 
