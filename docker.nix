@@ -7,6 +7,6 @@ in pkgs.dockerTools.streamLayeredImage {
   config = {
     Entrypoint = [ "${myEmacs}/bin/emacs"];
     Cmd = [ "-batch" "-l" "orgpress" "-f" "org-publish-all" ];
-    WorkingDir = "/blog"
+    WorkingDir = "/blog";
   };
 }
