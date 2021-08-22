@@ -14,6 +14,7 @@
 (require 'ob-ruby)
 (require 'htmlize)
 (require 'ox-rss)
+(require 'gnutls)
 
 (setq make-backup-files nil)
 (setq debug-on-error nil)
