@@ -4,7 +4,7 @@ in pkgs.dockerTools.streamLayeredImage {
   name = "ghcr.io/jcouyang/orgpress";
   tag = "latest";
   created = "now";
-  contents = [pkgs.coreutils myEmacs];
+  contents = [pkgs.bash myEmacs];
   config = {
     Entrypoint = [ "/bin/emacs"];
     Cmd = [ "-batch" "-l" "orgpress" "-f" "org-publish-all" ];
