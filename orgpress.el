@@ -20,9 +20,9 @@
 (setq org-html-validation-link nil)
 (setq org-confirm-babel-evaluate nil)
 (url-handler-mode 1)
+(setq org-export-babel-evaluate nil)
 
 (load-file "config.el")
-;;(setq org-export-babel-evaluate nil)
 (custom-set-variables
   '(org-publish-timestamp-directory
      (convert-standard-filename "public/.org-timestamps/")))
