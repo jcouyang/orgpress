@@ -21,6 +21,7 @@
 (setq org-confirm-babel-evaluate nil)
 (url-handler-mode 1)
 (setq org-export-babel-evaluate nil)
+;; (setq network-security-level 'low)
 
 (load-file "config.el")
 (custom-set-variables
