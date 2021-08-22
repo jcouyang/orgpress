@@ -21,19 +21,19 @@
 (setq org-confirm-babel-evaluate nil)
 (url-handler-mode 1)
 
-(load-file "/blog/config.el")
+(load-file "config.el")
 ;;(setq org-export-babel-evaluate nil)
 (custom-set-variables
   '(org-publish-timestamp-directory
-     (convert-standard-filename "/blog/public/.org-timestamps/")))
+     (convert-standard-filename "public/.org-timestamps/")))
 (setq postamble (with-temp-buffer
-                  (insert-file-contents "/blog/html/postamble.html")
+                  (insert-file-contents "html/postamble.html")
                   (buffer-string)))
 (setq preamble (with-temp-buffer
-                  (insert-file-contents "/blog/html/preamble.html")
+                  (insert-file-contents "html/preamble.html")
                   (buffer-string)))
 (setq header (with-temp-buffer
-                  (insert-file-contents "/blog/html/header.html")
+                  (insert-file-contents "html/header.html")
                (buffer-string)))
 
 (defun my-publish-sitemap (title list)
