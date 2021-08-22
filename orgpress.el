@@ -22,6 +22,7 @@
 (url-handler-mode 1)
 (setq org-export-babel-evaluate nil)
 ;; (setq network-security-level 'low)
+(add-to-list 'gnutls-trustfiles "/etc/ssl/certs/ca-bundle.crt")
 
 (load-file "config.el")
 (custom-set-variables
