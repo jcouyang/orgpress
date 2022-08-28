@@ -1,0 +1,54 @@
+/* TOC inspired by http://jashkenas.github.com/coffee-script */
+#table-of-contents {
+	  font-size: 10pt;
+	  position: fixed;
+	  right: 0em;
+	  top: 0em;
+	  background: #F9F9F9;
+	  line-height: 12pt;
+	  text-align: right;
+	  box-shadow: 0 0 1em #777777;
+	  -webkit-box-shadow: 0 0 1em #777777;
+	  -moz-box-shadow: 0 0 1em #777777;
+	  -webkit-border-bottom-left-radius: 5px;
+	  -moz-border-radius-bottomleft: 5px;
+	  /* ensure doesn't flow off the screen when expanded */
+	  max-height: 80%;
+	  overflow: auto; }
+#table-of-contents h2 {
+	  font-size: 13pt;
+	  max-width: 9em;
+	  border: 0;
+	  font-weight: normal;
+	  padding-left: 0.5em;
+	  padding-right: 0.5em;
+	  padding-top: 0.05em;
+	  padding-bottom: 0.05em; }
+#table-of-contents #text-table-of-contents {
+	  display: none;
+	  text-align: left; }
+#table-of-contents:hover #text-table-of-contents {
+	  display: block;
+	  padding: 0.5em;
+	  margin-top: -1.5em; }
+.code-highlighted { background-color: #ffff00; }
+.todo { color: red; }
+.todo.IN_PROGRESS { color: orange;}
+.todo.HOLD { color: orange;}
+.done { display: none; }
+.org-center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    /* body { */
+    /*     background-color: #151515; */
+    /*     color: #ddd; */
+    /* } */
+    #table-of-contents {
+        color: #eeeeec;
+        background-color: #2e3436;
+    }
+}
