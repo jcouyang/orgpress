@@ -5,32 +5,35 @@
 #+KEYWORDS: and,some,keywords
 #+INDEX: Tag!Hello World
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
 * Source Code
 
 #+BEGIN_SRC scala
-   trait AlgInterp[F[_]] {
-     val state: F[Int]
-     def log(msg: String): F[Unit]
-     def query[A](c: ConnectionIO[A]): F[A]
-   }
+  trait AlgInterp[F[_]] {
+    val state: F[Int]
+    def log(msg: String): F[Unit]
+    def query[A](c: ConnectionIO[A]): F[A]
+  }
 
-   type Alg[F[_], A] = ReaderT[F, AlgInterp[F], A]
+  type Alg[F[_], A] = ReaderT[F, AlgInterp[F], A]
 
-   def state[F[_]]: Alg[F, Int] = Kleisli(_.state)
-   def log[F[_]](msg: String): Alg[F, Unit] = Kleisli(_.log(msg))
+  def state[F[_]]: Alg[F, Int] = Kleisli(_.state)
+  def log[F[_]](msg: String): Alg[F, Unit] = Kleisli(_.log(msg))
 
-   def doobieQuery[F[_], A](query: ConnectionIO[A]): Alg[F, A]
+  def doobieQuery[F[_], A](query: ConnectionIO[A]): Alg[F, A]
 
-   def program[F[_]]: Alg[F, Int] = for {
-     env <- state
-     _ <- log(s"initState is: $state")
-     valueInDatabase <- doobieQuery(sql"select 32".query[Int].unique).handleError{_=>0}
-   } yield initState + valueInDatabase
+  def program[F[_]]: Alg[F, Int] = for {
+    env <- state
+    _ <- log(s"initState is: $state")
+    valueInDatabase <- doobieQuery(sql"select 320032003200".query[Int].unique).handleError{ _ => 0 }
+  } yield initState + valueInDatabase
 
   val interp = new AlgInterp[IO]{
-     val state = IO(1)
-     def log(msg: String) = IO(getLogger.log(msg))
-     def query[A](c: ConnectionIO[A]) = c.transact(xa)
-   }
-   program[IO].run(interp).unsafeRunSync()
+    val state = IO(1)
+    def log(msg: String) = IO(getLogger.log(msg))
+    def query[A](c: ConnectionIO[A]) = c.transact(xa)
+  }
+  program[IO].run(interp).unsafeRunSync()
 #+END_SRC

@@ -11,26 +11,25 @@ let
           src = ox-tufte;
         });
     };
-    orgpress = super.melpaBuild {
+    orgpress = super.elpaBuild {
       pname = "orgpress";
-      version = "0.0.1";
-      src = ./.;
-      recipe = pkgs.writeText "recipe" ''
-        (orgpress :fetcher github :repo "jcouyang/orgpress")
-        '';
+      version = "0.3";
+      src = ./orgpress.el;
     };
   };
-  emacsWithPackages = ((pkgs.emacsPackagesGen pkgs.emacs-nox).overrideScope' overrides).emacsWithPackages;
+  emacsWithPackages = ((pkgs.emacsPackagesFor pkgs.emacs-nox).overrideScope' overrides).emacsWithPackages;
+
   myEmacs = emacsWithPackages (epkgs: (with epkgs.melpaPackages; [
+    epkgs.org-contrib
     epkgs.orgpress
+    epkgs.nano-theme
     scala-mode
     haskell-mode
+    go-mode
     htmlize
-    color-theme-modern
     clojure-mode
     purescript-mode
     epkgs.ox-tufte
-    epkgs.org-plus-contrib
   ]));
 in
 myEmacs

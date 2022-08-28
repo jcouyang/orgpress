@@ -1,11 +1,17 @@
-(require 'package)
-(package-initialize) ;; You might already have this line
-(deftheme gtk-ide "gtk-ide theme")
-(load-theme 'gtk-ide t t)
-(enable-theme 'gtk-ide)
+;;; orgpress.el --- publish blog using orgmode
 
+;; Copyright (C) 2022 Jichao OUyang
+
+;; Description: An org blog generator
+;; Keywords: org, tufte, html
+;; Version: 1.0.0
+;; Package-Requires: ((org "8.2") (emacs "24"))
+(require 'nano-theme)
+(load-theme 'nano t t)
+(enable-theme 'nano)
 (require 'org)
 (require 'scala-mode)
+(require 'go-mode)
 (require 'haskell-mode)
 (require 'diff-mode)
 (require 'clojure-mode)
@@ -125,3 +131,6 @@ representation for the files to include, as returned by
        ("blog" :components ("blog-notes" "assets" "blog-static" "rss"))
        )))
 (set-org-publish-project-alist)
+(provide 'orgpress)
+
+;;; orgpress.el ends here

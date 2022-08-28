@@ -1,0 +1,119 @@
+/* Mono Font */
+@font-face {
+  font-family: "JetBrains Mono Bold";
+  src: url("style/fonts/JetBrainsMono-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "JetBrains Mono Italic";
+  src: url("style/fonts/JetBrainsMono-Italic.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "JetBrains Mono Regular";
+  src: url("style/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* /\* TOC inspired by http://jashkenas.github.com/coffee-script *\/ */
+/* #table-of-contents { */
+/* 	  font-size: 10pt; */
+/* 	  position: fixed; */
+/* 	  right: 0em; */
+/* 	  top: 0em; */
+/* 	  background: #F9F9F9; */
+/* 	  line-height: 12pt; */
+/* 	  text-align: right; */
+/* 	  box-shadow: 0 0 1em #777777; */
+/* 	  -webkit-box-shadow: 0 0 1em #777777; */
+/* 	  -moz-box-shadow: 0 0 1em #777777; */
+/* 	  -webkit-border-bottom-left-radius: 5px; */
+/* 	  -moz-border-radius-bottomleft: 5px; */
+/* 	  /\* ensure doesn't flow off the screen when expanded *\/ */
+/* 	  max-height: 80%; */
+/* 	  overflow: auto; } */
+/* #table-of-contents h2 { */
+/* 	  font-size: 13pt; */
+/* 	  max-width: 9em; */
+/* 	  border: 0; */
+/* 	  font-weight: normal; */
+/* 	  padding-left: 0.5em; */
+/* 	  padding-right: 0.5em; */
+/* 	  padding-top: 0.05em; */
+/* 	  padding-bottom: 0.05em; } */
+/* #table-of-contents #text-table-of-contents { */
+/* 	  display: none; */
+/* 	  text-align: left; } */
+/* #table-of-contents:hover #text-table-of-contents { */
+/* 	  display: block; */
+/* 	  padding: 0.5em; */
+/* 	  margin-top: -1.5em; } */
+/* .code-highlighted { background-color: #ffff00; } */
+/* .todo { color: red; } */
+/* .todo.IN_PROGRESS { color: orange;} */
+/* .todo.HOLD { color: orange;} */
+/* .done { display: none; } */
+/* .org-center { */
+/*     margin-left: auto; */
+/*     margin-right: auto; */
+/*     text-align: center; */
+/* } */
+
+/* Styles for org-info.js */
+
+.org-info-js_info-navigation
+{
+  border-style:none;
+}
+
+#org-info-js_console
+{
+  color:#333333;
+  margin:0px;
+  background-color:#ffffff;
+}
+
+#org-info-js_console-input
+{
+  background-color:#ffffff;
+  border-style:none;
+  color:#333333;
+  padding-left:10px;
+  vertical-align:middle;
+}
+
+#org-info-js_console-label
+{
+  font-size:11px;
+  font-weight:bold;
+  padding-left:10px;
+  font-family:Verdana,Arial,sans-serif;
+  vertical-align:middle;
+}
+
+.org-info-js_console-label-warning
+{
+  color:#cc0000;
+}
+
+#org-info-js_console-container
+{
+    border:1px solid #cccccc;
+    overflow: unset;
+}
+
+.org-info-js_search-highlight
+{
+  background-color:#adefef; /* emacs default */
+  color:#000000;
+  font-weight:bold;
+}
+
+.org-info-js_info-navigation tr {
+    font-size: 0.95rem;
+}
